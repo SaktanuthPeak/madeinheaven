@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/fomantic-ui-css/semantic.min.css') | add_date_url}}">
     <script src="{{ url_for('static', filename='node_modules/jquery/dist/jquery.min.js') | add_date_url}}"></script>
     <script src="{{ url_for('static', filename='node_modules/fomantic-ui-css/semantic.min.js') | add_date_url}}"></script>
-    <style type="text/css">
+    <style>
       body {
-        background-color: #706a9c;
-        
+          background-image: url('../../static/img/420356(2).jpg');
+          background-size: cover; 
+          background-position: center; 
       }
-      </style> 
+    </style>
+    
     
     {% block default_head %}{% endblock %}
     {% block additional_head %}{% endblock %}
