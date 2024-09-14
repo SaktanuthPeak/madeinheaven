@@ -1,16 +1,36 @@
-{% extends "/base/base-layout.html" %}
+{% extends "/base/baselogin-layout.html" %}
 
 {% block title %}ลงทะเบียน
 {% endblock %}
 
 {% block body %}
-ลงทะเบียน
-<form class="ui form" method="post">
-    {{ form.csrf_token }}
-    {{ form.email }}
-    {{ form.username }}
-    {{ form.input_password }}
-    {{ form.confirm_password }}
-    <button type="submit">ยืนยัน</button>
-</form>
+
+<div class="ui container" style="margin-top: 10cap;">
+    <div class="container eight wide column" style="margin-left: 25cap; margin-right: 25cap;">
+        <h2 class="ui teal image header">
+            <i class="ui icon poo"></i>
+            <div class="content">register your account</div>
+        </h2>
+        <div class="ui stacked segment">
+            <form class="ui form field" method="post">
+                {{ form.csrf_token }}
+                <div class="field">
+                    {{ form.email }}
+                </div>
+                <div class="field">
+                    {{ form.username }}
+                </div>
+                <div class="field">
+                    {{ form.input_password }}
+                </div>
+                <div class="field">
+                    {{ form.confirm_password }}
+                </div>
+                <button type="submit" class="ui teal button">
+                    ยืนยัน
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
