@@ -1,8 +1,8 @@
 import mongoengine as me
 from flask_mongoengine import MongoEngine
+from .courses import Course
 
-
-__all__ = []
+__all__ = ["Course"]
 
 
 db = MongoEngine()

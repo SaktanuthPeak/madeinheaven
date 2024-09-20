@@ -1,4 +1,8 @@
 from .accounts import LoginForm , RegisterForm
+from .courses import CourseForm
 
-
-__all__ = ['LoginForm','RegisterForm']
+__all__ = [
+'LoginForm',
+'RegisterForm',
+'CourseForm',
+]
