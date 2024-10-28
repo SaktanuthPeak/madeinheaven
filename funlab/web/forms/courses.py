@@ -20,15 +20,15 @@ BaseCourseForm = model_form(
         "updated_date",
         "creator",
         "updater",
+        "status"
     ],
     field_args = {
         "name" : {"label": "Course name"},
         "description" : {"label" : "Description"},
-        "professor" : {"label" : "Professor"},
         "code" : {"label" : "Code"},
         "enrollment" : {"label" : "Enrollment"},
     },
 )
 
 class CourseForm(BaseCourseForm):
-    status = fields.SelectField("Course_Status", choices=models.courses.COURSE_STATUS)
+    professors = fields.SelectField("Professor")
